@@ -1,0 +1,216 @@
+RAW RECORDING WITH light changes
+
+import java.util.regex.Pattern;
+import java.util.concurrent.TimeUnit;
+import org.testng.annotations.*;
+import static org.testng.Assert.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+//
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.BeforeClass;
+
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
+public class AutoMationExerciseCom {
+
+
+    private WebDriver driver;
+    private String baseUrl;
+   // private boolean acceptNextAlert = true;
+  //  private StringBuffer verificationErrors = new StringBuffer();
+
+
+    @BeforeClass(alwaysRun = true)
+    public void setUp() throws Exception {
+        baseUrl = "https://automationexercise.com/";
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver_win32/chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.setAcceptInsecureCerts(true);
+        options.getLogLevel();
+        driver = new ChromeDriver(options);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().window().maximize();
+        driver.get(baseUrl);
+
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    }
+
+    @Test
+    public void testAutomationexerciseCom() throws Exception {
+        // Label: Test
+        // ERROR: Caught exception [ERROR: Unsupported command [resizeWindow | 890,639 | ]]
+        driver.get("https://www.google.com/");
+        driver.findElement(By.name("q")).click();
+        driver.findElement(By.name("q")).clear();
+        driver.findElement(By.name("q")).sendKeys("AUTOMATIONEXERCISE.COM");
+        driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+        driver.findElement(By.name("q")).clear();
+        driver.findElement(By.name("q")).sendKeys("AUTOMATIONEXERCISE.COM");
+        driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+        driver.findElement(By.name("q")).clear();
+        driver.findElement(By.name("q")).sendKeys("AUTOMATIONEXERCISE.COM");
+        driver.findElement(By.cssSelector("h3.LC20lb.MBeuO.DKV0Md")).click();
+        driver.get("https://www.automationexercise.com/");
+        driver.findElement(By.linkText("Signup / Login")).click();
+        driver.findElement(By.xpath("//section[@id='form']/div/div/div[3]")).click();
+        driver.findElement(By.name("name")).click();
+        driver.findElement(By.name("name")).clear();
+        driver.findElement(By.name("name")).sendKeys("Tigran");
+        driver.findElement(By.cssSelector("div.signup-form > form > input[name=\"email\"]")).click();
+        driver.findElement(By.cssSelector("div.signup-form > form > input[name=\"email\"]")).clear();
+        driver.findElement(By.cssSelector("div.signup-form > form > input[name=\"email\"]")).sendKeys("tigran2@tigran.com");
+        driver.findElement(By.cssSelector("div.signup-form > form > button.btn.btn-default")).click();
+        driver.findElement(By.id("name")).click();
+        driver.findElement(By.cssSelector("#form > div.container > div.row")).click();
+        driver.findElement(By.id("password")).click();
+        driver.findElement(By.id("password")).clear();
+        driver.findElement(By.id("password")).sendKeys("123456");
+        driver.findElement(By.xpath("//section[@id='form']/div/div/div/div/form/div[5]/div/div[2]")).click();
+        driver.findElement(By.xpath("//section[@id='form']/div/div/div/div/form/div[5]/div/div[2]")).click();
+        driver.findElement(By.id("days")).click();
+        new Select(driver.findElement(By.id("days"))).selectByVisibleText("1");
+        driver.findElement(By.id("months")).click();
+        new Select(driver.findElement(By.id("months"))).selectByVisibleText("January");
+        driver.findElement(By.id("years")).click();
+        new Select(driver.findElement(By.id("years"))).selectByVisibleText("2000");
+        driver.findElement(By.id("newsletter")).click();
+        driver.findElement(By.id("optin")).click();
+        driver.findElement(By.id("first_name")).click();
+        driver.findElement(By.id("first_name")).clear();
+        driver.findElement(By.id("first_name")).sendKeys("Tigran");
+        driver.findElement(By.id("last_name")).click();
+        driver.findElement(By.id("last_name")).clear();
+        driver.findElement(By.id("last_name")).sendKeys("Babasyan");
+        driver.findElement(By.id("company")).click();
+        driver.findElement(By.id("company")).clear();
+        driver.findElement(By.id("company")).sendKeys("ACA");
+        driver.findElement(By.id("address1")).click();
+        driver.findElement(By.id("address1")).clear();
+        driver.findElement(By.id("address1")).sendKeys("Mergelyan");
+        driver.findElement(By.id("address2")).click();
+        driver.findElement(By.id("address2")).clear();
+        driver.findElement(By.id("address2")).sendKeys("Hakob Hakobyan 2");
+        driver.findElement(By.id("country")).click();
+        new Select(driver.findElement(By.id("country"))).selectByVisibleText("United States");
+        driver.findElement(By.id("state")).click();
+        driver.findElement(By.id("state")).clear();
+        driver.findElement(By.id("state")).sendKeys("Yerevan");
+        driver.findElement(By.id("city")).click();
+        driver.findElement(By.id("city")).clear();
+        driver.findElement(By.id("city")).sendKeys("Yerevan");
+        driver.findElement(By.id("zipcode")).click();
+        driver.findElement(By.id("zipcode")).clear();
+        driver.findElement(By.id("zipcode")).sendKeys("00123400");
+        driver.findElement(By.id("mobile_number")).click();
+        driver.findElement(By.id("mobile_number")).clear();
+        driver.findElement(By.id("mobile_number")).sendKeys("+37477123456");
+        driver.findElement(By.cssSelector("button.btn.btn-default")).click();
+        driver.findElement(By.cssSelector("h2.title.text-center")).click();
+        // ERROR: Caught exception [ERROR: Unsupported command [contextMenuAt | css=b | 117,18]]
+        driver.findElement(By.cssSelector("b")).click();
+        driver.findElement(By.cssSelector("#form > div.container > div.row")).click();
+        driver.findElement(By.linkText("Continue")).click();
+        driver.findElement(By.cssSelector("ul.nav.navbar-nav")).click();
+        driver.findElement(By.cssSelector("b")).click();
+        // ERROR: Caught exception [ERROR: Unsupported command [contextMenuAt | css=b | 21,8]]
+        driver.findElement(By.linkText("Delete Account")).click();
+        driver.findElement(By.cssSelector("button.btn.btn-danger.button-form.js-tooltip")).click();
+        driver.findElement(By.cssSelector("form.button-form > button.btn.btn-danger")).click();
+    } }
+
+
+
+/////////////////////////////////////////////////////////////
+
+package tests.seleniumTests;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class Tesla {
+    public static void main(String[] args) {
+        StringBuilder str = new StringBuilder("");
+        str.append(generateRandomString(12)).append("@gmail.com");
+        System.setProperty("webdriver.chrome.driver", "C:\\drivers\\chromedriver.exe");
+        ChromeDriver driver = new ChromeDriver();
+        driver.get("http://automationexercise.com/");
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().window().maximize();
+        driver.findElement(By.linkText("Signup / Login")).click();
+        WebElement webElement1 = driver.findElement(By.xpath("//input[@data-qa= 'signup-name']"));
+        webElement1.click();
+        webElement1.sendKeys("Tigran");
+        WebElement webElement2 = driver.findElement(By.xpath("//input[@data-qa= 'signup-email']"));
+        webElement2.click();
+        webElement2.sendKeys(str);
+        WebElement webElement3 = driver.findElement(By.xpath("//button[@data-qa='signup-button']"));
+        webElement3.click();
+        driver.findElement(By.id("password")).click();
+        driver.findElement(By.id("password")).sendKeys("mytv04021990");
+        driver.findElement(By.id("days")).click();
+        new Select(driver.findElement(By.id("days"))).selectByVisibleText("4");
+        driver.findElement(By.id("months")).click();
+        new Select(driver.findElement(By.id("months"))).selectByVisibleText("February");
+        driver.findElement(By.id("years")).click();
+        new Select(driver.findElement(By.id("years"))).selectByVisibleText("1990");
+        driver.findElement(By.id("newsletter")).click();
+        driver.findElement(By.id("optin")).click();
+        driver.findElement(By.id("first_name")).click();
+        driver.findElement(By.id("first_name")).sendKeys("Tigran");
+        driver.findElement(By.id("last_name")).click();
+        driver.findElement(By.id("last_name")).sendKeys("Babasyan");
+        driver.findElement(By.id("company")).click();
+        driver.findElement(By.id("company")).sendKeys("ACA");
+        driver.findElement(By.id("address1")).click();
+        driver.findElement(By.id("address1")).sendKeys("Argishti 4 / 1");
+        driver.findElement(By.id("address2")).click();
+        driver.findElement(By.id("address2")).sendKeys("Argishti 4/1");
+        driver.findElement(By.id("country")).click();
+        new Select(driver.findElement(By.id("country"))).selectByVisibleText("Canada");
+        driver.findElement(By.id("state")).click();
+        driver.findElement(By.id("state")).sendKeys("aaa");
+        driver.findElement(By.id("city")).click();
+        driver.findElement(By.id("city")).sendKeys("bbb");
+        driver.findElement(By.id("zipcode")).click();
+        driver.findElement(By.id("zipcode")).sendKeys("123");
+        driver.findElement(By.id("mobile_number")).click();
+        driver.findElement(By.id("mobile_number")).sendKeys("93600777");
+        driver.findElement(By.cssSelector("button.btn.btn-default")).click();
+        WebElement webElement0 = driver.findElement(By.xpath("//h2[@data-qa='account-created']"));
+        if(webElement0.getText().contains("ACCOUNT CREATED!")){
+            System.out.println("amen inch normal e");
+            WebElement continue1  = driver.findElement(By.xpath("//a[@data-qa='continue-button']"));
+            continue1.click();
+        }
+
+        driver.findElement(By.linkText("Delete Account")).click();
+    }
+    public static String generateRandomString(int strLen) {
+        int leftLimit = 97; // letter 'a'
+        int rightLimit = 122; // letter 'z'
+        int targetStringLength = strLen;
+        Random random = new Random();
+        String generatedString = random.ints(leftLimit, rightLimit + 1)
+                .limit(targetStringLength)
+                .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
+                .toString();
+        return generatedString;
+    }
+
+}
